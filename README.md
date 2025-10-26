@@ -503,6 +503,7 @@ FROM (
 - Department Recovery Rate Comparison - Ranked bar chart showing quality metrics
 
 ## 🎓 Learning Outcomes
+
 - By working through this project, you will master:
 - Healthcare data analytics and patient record analysis
 - Hospital database design and schema optimization
@@ -518,6 +519,8 @@ FROM (
 - Strategic decision support through data analytics
 - Working with large healthcare datasets (1,000+ records)
 - Creating actionable business intelligence for hospital administration
+
+```
 
 ## 📝 Author
 Your Name
