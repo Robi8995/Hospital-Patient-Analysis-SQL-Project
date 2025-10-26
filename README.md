@@ -528,11 +528,9 @@ LinkedIn | GitHub
 
 
 ## 📚 Technical Stack
-Database: MySQL 8.0+
-Languages: SQL
-Tools: MySQL Workbench, CSV Export
-Visualization: Excel, Tableau, Power BI (recommended)
-Documentation: Markdown
+- Database: MySQL 8.0+
+- Languages: SQL
+- Tools: MySQL Workbench, CSV Export
 
 *This comprehensive project demonstrates SQL mastery in healthcare analytics, combining sophisticated database design with clinical outcome analysis and financial performance metrics to drive meaningful improvements in hospital operations, patient care quality, and organizational efficiency.*
 
