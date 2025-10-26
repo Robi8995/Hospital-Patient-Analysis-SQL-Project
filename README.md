@@ -491,33 +491,33 @@ FROM (
 ```
 
 ## 📊 Recommended Visualizations
-Admission Volume Dashboard - Column chart of admissions by department with trend line
-Treatment Outcomes Pie Chart - Distribution of Recovered (70.4%) vs Referred (23.4%) vs Deceased (6.2%)
-Department Efficiency Heat Map - Scatter plot of admissions vs average stay revealing efficiency patterns
-Length of Stay Benchmark - Horizontal bar chart comparing avg stay across departments
-Financial Impact by Outcome - Bar chart of average bills by treatment outcome
-Physician Performance Scorecard - Table of top doctors with patient count, recovery rate, avg bill
-Patient Age Distribution Histogram - Distribution showing peak ages (36-60) and senior population
-High-Cost Patient Pareto Chart - Identifying 20% of patients driving costs
-Monthly Admission Trend Line - Temporal analysis revealing seasonal patterns
-Department Recovery Rate Comparison - Ranked bar chart showing quality metrics
+- Admission Volume Dashboard - Column chart of admissions by department with trend line
+- Treatment Outcomes Pie Chart - Distribution of Recovered (70.4%) vs Referred (23.4%) vs Deceased (6.2%)
+- Department Efficiency Heat Map - Scatter plot of admissions vs average stay revealing efficiency patterns
+- Length of Stay Benchmark - Horizontal bar chart comparing avg stay across departments
+- Financial Impact by Outcome - Bar chart of average bills by treatment outcome
+- Physician Performance Scorecard - Table of top doctors with patient count, recovery rate, avg bill
+- Patient Age Distribution Histogram - Distribution showing peak ages (36-60) and senior population
+- High-Cost Patient Pareto Chart - Identifying 20% of patients driving costs
+- Monthly Admission Trend Line - Temporal analysis revealing seasonal patterns
+- Department Recovery Rate Comparison - Ranked bar chart showing quality metrics
 
 ## 🎓 Learning Outcomes
-By working through this project, you will master:
-Healthcare data analytics and patient record analysis
-Hospital database design and schema optimization
-Medical department performance evaluation techniques
-Treatment outcome analysis and quality metrics
-Physician workload and productivity assessment
-Patient segmentation by demographics and clinical factors
-Complex SQL queries for multi-dimensional healthcare analysis
-Window functions for ranking and cumulative calculations
-CASE statements for outcome classification and categorization
-Temporal analysis and admission trend identification
-Financial analysis of healthcare delivery costs
-Strategic decision support through data analytics
-Working with large healthcare datasets (1,000+ records)
-Creating actionable business intelligence for hospital administration
+- By working through this project, you will master:
+- Healthcare data analytics and patient record analysis
+- Hospital database design and schema optimization
+- Medical department performance evaluation techniques
+- Treatment outcome analysis and quality metrics
+- Physician workload and productivity assessment
+- Patient segmentation by demographics and clinical factors
+- Complex SQL queries for multi-dimensional healthcare analysis
+- Window functions for ranking and cumulative calculations
+- CASE statements for outcome classification and categorization
+- Temporal analysis and admission trend identification
+- Financial analysis of healthcare delivery costs
+- Strategic decision support through data analytics
+- Working with large healthcare datasets (1,000+ records)
+- Creating actionable business intelligence for hospital administration
 
 ## 📝 Author
 Your Name
