@@ -336,12 +336,12 @@ Hospital administrators face challenges in understanding patient flow patterns, 
 ## 🚀 How to Use
 
 ### Step 1: Create Database
-
+```sql
 CREATE DATABASE IF NOT EXISTS hospital_db;
 USE hospital_db;
 
 ### Step 2: Create Table Structure
-
+```sql
 CREATE TABLE IF NOT EXISTS patients (
     patient_id INT PRIMARY KEY,
     patient_name VARCHAR(100),
@@ -357,6 +357,7 @@ CREATE TABLE IF NOT EXISTS patients (
 );
 
 ###  Step 3: Load Patient Data
+```sql
 LOAD DATA INFILE 'synthetic_patient_records.csv'
 INTO TABLE patients
 FIELDS TERMINATED BY ','
@@ -364,6 +365,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 ###  Step 4: Run Core Analysis Queries
+```sql
 Query 1: Patient Admissions by Department
 SELECT department, COUNT(*) AS total_admissions
 FROM patients
@@ -473,6 +475,7 @@ ORDER BY department, age_group;
 Cross-tabulates outcomes across multiple dimensions for targeted analysis
 
 ###  Step 5: Export Results to CSV
+```sql
 SELECT * INTO OUTFILE '/tmp/admissions_by_department.csv'
 FIELDS TERMINATED BY ','
 FROM (
