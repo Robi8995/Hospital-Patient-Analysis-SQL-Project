@@ -340,7 +340,8 @@ Hospital administrators face challenges in understanding patient flow patterns, 
 CREATE DATABASE IF NOT EXISTS hospital_db;
 USE hospital_db;
 
-Step 2: Create Table Structure
+###Step 2: Create Table Structure
+```sql
 CREATE TABLE IF NOT EXISTS patients (
     patient_id INT PRIMARY KEY,
     patient_name VARCHAR(100),
