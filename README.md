@@ -339,6 +339,7 @@ Hospital administrators face challenges in understanding patient flow patterns, 
 ```sql
 CREATE DATABASE IF NOT EXISTS hospital_db;
 USE hospital_db;
+```
 
 ### Step 2: Create Table Structure
 ```sql
@@ -355,6 +356,7 @@ CREATE TABLE IF NOT EXISTS patients (
     doctor_in_charge VARCHAR(100),
     total_bill DECIMAL(12,2)
 );
+```
 
 ###  Step 3: Load Patient Data
 ```sql
@@ -363,6 +365,7 @@ INTO TABLE patients
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+```
 
 ###  Step 4: Run Core Analysis Queries
 ```sql
@@ -473,6 +476,7 @@ GROUP BY department, age_group
 ORDER BY department, age_group;
 
 Cross-tabulates outcomes across multiple dimensions for targeted analysis
+```
 
 ###  Step 5: Export Results to CSV
 ```sql
@@ -484,7 +488,7 @@ FROM (
     GROUP BY department
     ORDER BY total_admissions DESC
 ) t;
-
+```
 
 📊 Recommended Visualizations
 Admission Volume Dashboard - Column chart of admissions by department with trend line
