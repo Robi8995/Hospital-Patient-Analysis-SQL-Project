@@ -520,12 +520,11 @@ FROM (
 - Working with large healthcare datasets (1,000+ records)
 - Creating actionable business intelligence for hospital administration
 
-```
+
 
 ## 📝 Author
-Your Name
- Healthcare Data Analytics Specialist
- LinkedIn | GitHub
+Robin Jimmichan Pooppally
+LinkedIn | GitHub
 
 ## 🔗 Related Projects
 Healthcare Claims Fraud Detection & Risk Analysis
