@@ -523,8 +523,8 @@ FROM (
 
 
 ## 📝 Author
-Robin Jimmichan Pooppally
-LinkedIn | GitHub
+**Robin Jimmichan P**  
+[LinkedIn](https://www.linkedin.com/in/robin-jimmichan-pooppally-676061291) | [GitHub](https://github.com/Robi8995)
 
 
 ## 📚 Technical Stack
