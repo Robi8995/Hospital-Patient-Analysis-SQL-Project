@@ -490,7 +490,7 @@ FROM (
 ) t;
 ```
 
-📊 Recommended Visualizations
+## 📊 Recommended Visualizations
 Admission Volume Dashboard - Column chart of admissions by department with trend line
 Treatment Outcomes Pie Chart - Distribution of Recovered (70.4%) vs Referred (23.4%) vs Deceased (6.2%)
 Department Efficiency Heat Map - Scatter plot of admissions vs average stay revealing efficiency patterns
@@ -502,7 +502,7 @@ High-Cost Patient Pareto Chart - Identifying 20% of patients driving costs
 Monthly Admission Trend Line - Temporal analysis revealing seasonal patterns
 Department Recovery Rate Comparison - Ranked bar chart showing quality metrics
 
-🎓 Learning Outcomes
+## 🎓 Learning Outcomes
 By working through this project, you will master:
 Healthcare data analytics and patient record analysis
 Hospital database design and schema optimization
@@ -519,12 +519,12 @@ Strategic decision support through data analytics
 Working with large healthcare datasets (1,000+ records)
 Creating actionable business intelligence for hospital administration
 
-📝 Author
+## 📝 Author
 Your Name
  Healthcare Data Analytics Specialist
  LinkedIn | GitHub
 
-🔗 Related Projects
+## 🔗 Related Projects
 Healthcare Claims Fraud Detection & Risk Analysis
 Loan Default Risk Segmentation
 Inventory & Supplier Analysis
@@ -533,13 +533,13 @@ Telco Customer Churn Analysis
 Emergency Room Performance Analytics
 Patient Readmission Risk Modeling
 
-📚 Technical Stack
+## 📚 Technical Stack
 Database: MySQL 8.0+
 Languages: SQL
 Tools: MySQL Workbench, CSV Export
 Visualization: Excel, Tableau, Power BI (recommended)
 Documentation: Markdown
 
-This comprehensive project demonstrates SQL mastery in healthcare analytics, combining sophisticated database design with clinical outcome analysis and financial performance metrics to drive meaningful improvements in hospital operations, patient care quality, and organizational efficiency.
+*This comprehensive project demonstrates SQL mastery in healthcare analytics, combining sophisticated database design with clinical outcome analysis and financial performance metrics to drive meaningful improvements in hospital operations, patient care quality, and organizational efficiency.*
 
 
