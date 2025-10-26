@@ -526,14 +526,6 @@ FROM (
 Robin Jimmichan Pooppally
 LinkedIn | GitHub
 
-## 🔗 Related Projects
-Healthcare Claims Fraud Detection & Risk Analysis
-Loan Default Risk Segmentation
-Inventory & Supplier Analysis
-Bank Customer Segmentation
-Telco Customer Churn Analysis
-Emergency Room Performance Analytics
-Patient Readmission Risk Modeling
 
 ## 📚 Technical Stack
 Database: MySQL 8.0+
