@@ -3,7 +3,6 @@
 [![SQL](https://img.shields.io/badge/SQL-MySQL-blue)](https://www.mysql.com/) 
 [![Skills](https://img.shields.io/badge/Skills-Healthcare_Analytics-green)](https://www.linkedin.com/in/yourprofile)
 [![Database](https://img.shields.io/badge/Database-Design-orange)](https://github.com/yourprofile)
-[![Dataset](https://img.shields.io/badge/Dataset-1000_Records-red)](https://github.com/yourprofile)
 
 A comprehensive SQL-based hospital analytics project for analyzing patient admissions, treatment outcomes, department performance, and healthcare delivery metrics across **1,000 patient records** spanning **7 medical departments**.
 
