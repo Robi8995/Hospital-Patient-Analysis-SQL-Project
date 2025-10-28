@@ -526,5 +526,3 @@ FROM (
 ---
 
 *This comprehensive project demonstrates SQL mastery in healthcare analytics, combining sophisticated database design with clinical outcome analysis and financial performance metrics to drive meaningful improvements in hospital operations, patient care quality, and organizational efficiency*
-
-
