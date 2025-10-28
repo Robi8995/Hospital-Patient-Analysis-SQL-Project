@@ -341,6 +341,7 @@ LIMIT 10;
 | **Database** | MySQL 8.0+ |
 | **Languages** | SQL |
 | **Tools** | MySQL Workbench, CSV Export |
+| **Dataset Used** | synthetic_patient_records.csv |
 
 ---
 
