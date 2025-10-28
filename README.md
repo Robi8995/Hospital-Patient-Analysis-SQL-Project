@@ -90,41 +90,6 @@ Hospital administrators face challenges in understanding patient flow patterns, 
 - Support workload balancing and scheduling
 - Recognize top-performing clinical staff
 
-### 6. **Patient Demographics Analysis**
-- Analyze age distribution of patient population
-- Examine gender representation
-- Identify age-related admission patterns
-- Support population health management strategies
-- Enable targeted preventive care programs
-
-### 7. **Department Performance Comparison**
-- Benchmark departments across multiple metrics
-- Compare admission volume, outcomes, and costs
-- Identify best-practice departments
-- Flag underperforming areas requiring intervention
-- Support strategic resource reallocation
-
-### 8. **Critical Care Units Analysis**
-- Analyze emergency and intensive care admissions
-- Compare emergency department metrics to elective procedures
-- Evaluate critical care resource utilization
-- Support emergency preparedness planning
-- Enable trauma and critical care optimization
-
-### 9. **High-Cost Patient Identification**
-- Identify top patients by total billing amount
-- Analyze cumulative spending patterns
-- Support high-cost care management programs
-- Enable intervention strategies for expensive cases
-- Support financial planning and budget forecasting
-
-### 10. **Cumulative Patient Spending Trends**
-- Track spending progression over admission timeline
-- Identify cost escalation patterns during hospitalization
-- Support predictive financial modeling
-- Enable early intervention for cost containment
-- Analyze spending velocity and trajectory
-
 ---
 
 ## 🛠️ SQL Techniques Used
@@ -222,45 +187,6 @@ Hospital administrators face challenges in understanding patient flow patterns, 
 
 **Insight:** Physician workload relatively evenly distributed across 50 doctors, with top physicians (Lopez, Johnson, Morrow) averaging only 2 patients each. Distribution reflects large physician pool relative to patient volume, suggesting staffing redundancy or part-time assignments.
 
-### Patient Demographics by Age
-
-| Age Group | Count | % | Avg Bill | Avg Stay |
-|---|---|---|---|---|
-| **Pediatric (0-18)** | 142 | 14.2% | $23,456.78 | 13.2 days |
-| **Young Adult (19-35)** | 185 | 18.5% | $24,123.45 | 14.8 days |
-| **Adult (36-60)** | 387 | 38.7% | $25,301.92 | 15.9 days |
-| **Senior (60+)** | 286 | 28.6% | $26,754.31 | 16.7 days |
-
-**Insight:** Adult population (36-60) represents largest cohort at 38.7%, showing highest average billing and longer stays. Senior patients (60+) demonstrate highest costs at $26,754 average, indicating age-related complexity and comorbidities.
-
-### Department Performance Summary
-
-| Department | Admissions | Avg Outcome % Recovered | Avg Bill | Efficiency Score |
-|---|---|---|---|---|
-| **Cardiology** | 163 | 71.2% | $25,340 | 8.6/10 |
-| **Pediatrics** | 150 | 73.3% | $24,120 | 9.1/10 |
-| **Emergency** | 147 | 68.7% | $25,610 | 7.9/10 |
-| **Orthopedics** | 141 | 72.1% | $24,890 | 8.8/10 |
-| **General Surgery** | 136 | 70.6% | $25,780 | 8.1/10 |
-| **Neurology** | 133 | 71.4% | $24,560 | 8.9/10 |
-| **Oncology** | 130 | 69.2% | $25,110 | 8.2/10 |
-
-**Insight:** Pediatrics demonstrates best efficiency (9.1/10) with high recovery rate (73.3%) and shortest stays. Emergency shows lowest efficiency (7.9/10) reflecting unpredictable case complexity. Cardiology balances high volume (163) with strong outcomes (71.2%).
-
-### High-Cost Patient Analysis
-
-| Metric | Value |
-|---|---|
-| **Total Patients** | 1,000 |
-| **High-Cost Patients (Top 50)** | 50 |
-| **% of Patient Base** | 5.0% |
-| **Cumulative Cost Top 50** | $1,247,389.52 |
-| **% of Total Revenue** | 6.9% |
-| **Avg Cost Top 50** | $24,947.79 |
-| **Max Individual Patient** | $48,721.15 |
-
-**Insight:** Top 50 patients represent only 5% of patient base but generate 6.9% of revenue. Concentrated spending among high-cost cases presents intervention opportunity—targeted care management could reduce costs 10-15%.
-
 ---
 
 ## 💼 Business Impact
@@ -306,29 +232,6 @@ Hospital administrators face challenges in understanding patient flow patterns, 
 5. **top_doctors.csv** - Physician performance ranking (10 rows)
    - Doctor Name, Patients Handled
    - John Lopez: 2, Karen Johnson: 2, John Morrow: 2, etc.
-
-6. **hospital_patient_records_analysis.sql** - Complete SQL query library
-   - 10 core analysis queries with documentation
-
-7. **synthetic_patient_records.csv** - Raw patient data (1,000 records)
-   - Complete patient demographics, admission, and billing data
-
-**Generated Analysis Outputs:**
-
-8. **Department_Performance_Report.csv** - Comprehensive department metrics (7 rows)
-   - Department, Admissions, Avg Recovery %, Avg Bill, Efficiency Score
-
-9. **High_Cost_Patients_Output.csv** - Top 50 patients by billing (50 rows)
-   - Patient ID, Patient Name, Total Bill, Admission Count
-
-10. **Patient_Demographics_Output.csv** - Age and gender analysis (4 rows)
-    - Age Group, Count, Percentage, Average Bill
-
-11. **Outcome_Recovery_Rate_Output.csv** - Quality metrics (7 rows)
-    - Department, Recovered %, Referred %, Deceased %
-
-12. **Average_Stay_Comparison_Output.csv** - Efficiency benchmarking (7 rows)
-    - Department, Average Stay Days, Patient Count, Total Patient-Days
 
 ---
 
@@ -408,73 +311,7 @@ GROUP BY doctor_in_charge
 ORDER BY patients_handled DESC
 LIMIT 10;
 
-Ranks physicians by productivity and resource utilization
-Query 6: Patient Demographics Analysis
-SELECT 
-    CASE 
-        WHEN age < 18 THEN 'Pediatric (0-18)'
-        WHEN age BETWEEN 18 AND 35 THEN 'Young Adult (18-35)'
-        WHEN age BETWEEN 36 AND 60 THEN 'Adult (36-60)'
-        ELSE 'Senior (60+)'
-    END AS age_group,
-    COUNT(*) AS patient_count,
-    ROUND(COUNT(*)*100.0/(SELECT COUNT(*) FROM patients),2) AS percentage,
-    ROUND(AVG(total_bill),2) AS avg_bill,
-    ROUND(AVG(length_of_stay),2) AS avg_stay
-FROM patients
-GROUP BY age_group
-ORDER BY age_group;
 
-Segments population by demographics to guide care strategies
-Query 7: Department Performance Comparison
-SELECT department,
-       COUNT(*) AS total_admissions,
-       ROUND(SUM(CASE WHEN treatment_outcome='Recovered' THEN 1 ELSE 0 END)*100.0/COUNT(*),1) AS recovery_pct,
-       ROUND(AVG(total_bill),2) AS avg_bill,
-       ROUND(AVG(length_of_stay),2) AS avg_stay,
-       ROUND((COUNT(*)*100.0/(SELECT COUNT(*) FROM patients)),1) AS pct_of_total
-FROM patients
-GROUP BY department
-ORDER BY total_admissions DESC;
-
-Enables cross-department performance benchmarking and best-practice identification
-Query 8: High-Cost Patient Identification
-SELECT patient_id, patient_name, age, department,
-       COUNT(*) AS admission_count,
-       ROUND(SUM(total_bill),2) AS total_patient_cost,
-       ROUND(AVG(total_bill),2) AS avg_bill_per_admission,
-       ROUND(AVG(length_of_stay),2) AS avg_stay
-FROM patients
-GROUP BY patient_id, patient_name, age, department
-HAVING SUM(total_bill) > 50000
-ORDER BY total_patient_cost DESC
-LIMIT 50;
-
-Identifies candidates for high-cost care management programs
-Query 9: Cumulative Patient Spending Trends
-SELECT patient_id, admission_date, total_bill,
-       SUM(total_bill) OVER (PARTITION BY patient_id ORDER BY admission_date) AS cumulative_spending,
-       ROW_NUMBER() OVER (PARTITION BY patient_id ORDER BY admission_date) AS admission_sequence
-FROM patients
-ORDER BY patient_id, admission_date;
-
-Tracks spending progression and cost escalation patterns for interventions
-Query 10: Recovery Rate by Department and Age
-SELECT department,
-       CASE 
-           WHEN age < 18 THEN 'Pediatric (0-18)'
-           WHEN age BETWEEN 18 AND 35 THEN 'Young Adult (18-35)'
-           WHEN age BETWEEN 36 AND 60 THEN 'Adult (36-60)'
-           ELSE 'Senior (60+)'
-       END AS age_group,
-       COUNT(*) AS patient_count,
-       SUM(CASE WHEN treatment_outcome='Recovered' THEN 1 ELSE 0 END) AS recovered,
-       ROUND(SUM(CASE WHEN treatment_outcome='Recovered' THEN 1 ELSE 0 END)*100.0/COUNT(*),1) AS recovery_rate
-FROM patients
-GROUP BY department, age_group
-ORDER BY department, age_group;
-
-Cross-tabulates outcomes across multiple dimensions for targeted analysis
 ```
 
 ###  Step 5: Export Results to CSV
@@ -487,6 +324,7 @@ FROM (
     GROUP BY department
     ORDER BY total_admissions DESC
 ) t;
+
 ```
 
 ## 🎓 Learning Outcomes
