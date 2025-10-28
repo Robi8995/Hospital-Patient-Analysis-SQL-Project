@@ -509,7 +509,7 @@ FROM (
 - Creating actionable business intelligence for hospital administration
 
 ## 📝 Author
-**Robin Jimmichan P**  
+**Robin Jimmichan Pooppally**  
 [LinkedIn](https://www.linkedin.com/in/robin-jimmichan-pooppally-676061291) | [GitHub](https://github.com/Robi8995)
 
 ## 📚 Technical Stack
