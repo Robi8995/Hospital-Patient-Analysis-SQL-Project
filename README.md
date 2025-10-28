@@ -507,15 +507,24 @@ FROM (
 - Working with large healthcare datasets (1,000+ records)
 - Creating actionable business intelligence for hospital administration
 
+---
+
+## 📚 Technical Stack
+
+| Component | Technology |
+|-----------|------------|
+| **Database** | MySQL 8.0+ |
+| **Languages** | SQL |
+| **Tools** | MySQL Workbench, CSV Export |
+
+---
+
 ## 📝 Author
 **Robin Jimmichan Pooppally**  
 [LinkedIn](https://www.linkedin.com/in/robin-jimmichan-pooppally-676061291) | [GitHub](https://github.com/Robi8995)
 
-## 📚 Technical Stack
-- Database: MySQL 8.0+
-- Languages: SQL
-- Tools: MySQL Workbench, CSV Export
+---
 
-*This comprehensive project demonstrates SQL mastery in healthcare analytics, combining sophisticated database design with clinical outcome analysis and financial performance metrics to drive meaningful improvements in hospital operations, patient care quality, and organizational efficiency.*
+*This comprehensive project demonstrates SQL mastery in healthcare analytics, combining sophisticated database design with clinical outcome analysis and financial performance metrics to drive meaningful improvements in hospital operations, patient care quality, and organizational efficiency*
 
 
