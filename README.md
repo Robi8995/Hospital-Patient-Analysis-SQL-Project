@@ -314,19 +314,6 @@ LIMIT 10;
 
 ```
 
-###  Step 5: Export Results to CSV
-```sql
-SELECT * INTO OUTFILE '/tmp/admissions_by_department.csv'
-FIELDS TERMINATED BY ','
-FROM (
-    SELECT department, COUNT(*) AS total_admissions
-    FROM patients
-    GROUP BY department
-    ORDER BY total_admissions DESC
-) t;
-
-```
-
 ## 🎓 Learning Outcomes
 
 - By working through this project, you will master:
