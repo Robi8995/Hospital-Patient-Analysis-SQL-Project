@@ -24,7 +24,7 @@ A comprehensive SQL-based hospital analytics project for analyzing patient admis
 
 **Objective:** Analyze hospital patient records to identify admission patterns, evaluate department performance, assess treatment outcomes, optimize resource allocation, and provide data-driven insights for healthcare administration.
 
-**Database:** `synthetic_patient_records.csv` | **Industry:** Healthcare & Hospital Administration
+**Database:** `hospital_db` | **Industry:** Healthcare & Hospital Administration
 
 **Problem Statement:**  
 Hospital administrators face challenges in understanding patient flow patterns, department efficiency, treatment effectiveness, and resource utilization across multiple medical specialties. This project provides comprehensive analytics on admissions, length of stay, treatment outcomes, and physician performance to optimize operations, improve patient care, and support strategic decision-making in healthcare delivery.
