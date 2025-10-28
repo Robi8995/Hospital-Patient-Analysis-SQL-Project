@@ -1,10 +1,2 @@
-.gitattributes
-```
-
-(It starts with a dot `.`)
-
-### **Step 4:**
-In the big text area below, **paste this:**
-```
 *.sql linguist-language=SQL
 *.csv linguist-language=CSV
